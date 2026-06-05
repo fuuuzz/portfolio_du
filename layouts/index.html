@@ -1,0 +1,140 @@
+{{ define "main" }} {{ $profile := .Site.Params.profile }} {{ $skills :=
+.Site.Data.skills }} {{ $software := .Site.Data.software }} {{ $machines :=
+.Site.Data.machines }} {{ $blocsCatalog := .Site.Data.blocs.items }} {{ $projets
+:= where .Site.RegularPages "Section" "projets" }}
+
+<section id="presentation" class="section hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-title-line">PORTFOLIO</span>
+          <span class="hero-title-line gradient-text">{{ $profile.name }}</span>
+        </h1>
+        <p class="hero-tagline">{{ .Site.Params.description }}</p>
+        <div class="prose hero-prose">{{ $profile.text | markdownify }}</div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <img
+            src="{{ $profile.image | relURL }}"
+            alt="Photo de {{ $profile.name }}"
+            width="480"
+            height="480"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projets" class="section section-panel">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">PROJETS</h2>
+      <p class="section-desc">
+        Projets réalisés dans le cadre du
+        <strong
+          >Diplôme Universitaire Fabmanager - Techniques de facilitation et
+          fabrication numérique</strong
+        >.
+      </p>
+    </header>
+
+    <ul class="project-grid">
+      {{ range $projets.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="project-card card-glow">
+          {{ with .Params.featured_image }}
+          <div class="project-card-media">
+            <img
+              src="{{ . | relURL }}"
+              alt=""
+              loading="lazy"
+              width="400"
+              height="260"
+            />
+          </div>
+          {{ end }}
+          <div class="project-card-body">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.summary }}</p>
+            {{ partial "bloc-badges.html" (dict "blocs" .Params.blocs "catalog"
+            $blocsCatalog) }}
+            <span class="btn-ghost">Voir le projet →</span>
+          </div>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section id="savoir-faire" class="section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">SAVOIR-FAIRE & OUTILS</h2>
+      <p class="section-desc"></p>
+    </header>
+
+    <div class="competence-block">
+      <h3 class="competence-subtitle">{{ $skills.title }}</h3>
+      <ul class="card-grid">
+        {{ range $skills.items }}
+        <li class="card card-glow">
+          <h4>{{ .name }}</h4>
+          <p class="card-spec">{{ .description }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="competence-block">
+      <h3 class="competence-subtitle">{{ $software.title }}</h3>
+      <ul class="tag-grid">
+        {{ range $software.items }}
+        <li class="tag card-glow">
+          <span class="tag-name">{{ .name }}</span>
+          <span class="tag-cat">{{ .category }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="competence-block">
+      <h3 class="competence-subtitle">{{ $machines.title }}</h3>
+      <ul class="card-grid">
+        {{ range $machines.items }}
+        <li class="card card-glow card--machine">
+          <h4>{{ .name }}</h4>
+          <p class="card-spec">{{ .description }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<section id="referentiel-du" class="section">
+  <div class="container">
+    <div class="referentiel-frame">
+      <header class="section-header">
+        <h2 class="section-title">BLOCS DE COMPÉTENCES</h2>
+        <p class="section-desc">
+          Les <strong>4 blocs de compétences</strong> du
+          <strong>Diplôme Universitaire Fabmanager</strong> — objectifs
+          pédagogiques officiels, par opposition aux savoir-faire techniques
+          listés plus haut.
+        </p>
+      </header>
+
+      <div class="blocs-grid">
+        {{ range $blocsCatalog }} {{ partial "bloc-catalog-card.html" (dict
+        "bloc" .) }} {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

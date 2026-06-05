@@ -1,0 +1,33 @@
+{{/* Section détaillée — dict: "blocs" .Params.blocs, "catalog" .Site.Data.blocs.items */}}
+{{ $blocs := .blocs }}
+{{ $catalog := .catalog }}
+{{ with $blocs }}
+<section class="blocs-detail" aria-labelledby="blocs-detail-title">
+  <h2 id="blocs-detail-title" class="blocs-detail-title">Blocs du diplôme mobilisés</h2>
+  <ul class="blocs-detail-grid">
+    {{ range . }}
+      {{ $id := . }}
+      {{ $note := "" }}
+      {{ if isset . "id" }}
+        {{ $id = .id }}
+        {{ $note = .note | default "" }}
+      {{ end }}
+      {{ range $catalog }}
+        {{ if eq .id $id }}
+        <li class="bloc-detail-item card-glow" style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}">
+          {{ partial "bloc-catalog-card.html" (dict "bloc" . "compact" true) }}
+          {{ with $note }}
+          <p class="bloc-card-note">
+            <span class="bloc-catalog-label">Ce projet</span>
+            {{ . }}
+          </p>
+          {{ else }}
+          <p class="bloc-card-note bloc-card-note--empty">Ajoutez une <code>note:</code> dans le front matter pour expliquer ce que ce projet apporte à ce bloc.</p>
+          {{ end }}
+        </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

@@ -1,0 +1,14 @@
+title: Savoir-faire
+items:
+  - name: Accompagnement et animation
+    description: Accueil, formation et médiation en espace de fabrication.
+  - name: Pédagogie
+    description: Transmission, pédagogie par projets, suivi des usagers.
+  - name: Documentation
+    description: Pas à pas, tutoriels, fiches techniques, signalétique, fiches de sécurité.
+  - name: Programmation
+    description: Programmation en Javascript/Typescript, Python.
+  - name: Modélisation
+    description: Dessin vectoriel, concpection 3D, paramétrique, paramétrage d'usinage.
+  - name: Électronique
+    description: Circuits simples, soudure, programmation microcontrôleurs.

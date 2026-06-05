@@ -1,0 +1,49 @@
+# Référentiel — Diplôme Universitaire Fabmanager
+title: Blocs de compétences
+items:
+  - id: gerer-fablab
+    number: 1
+    name: Gérer un fablab
+    short_name: Bloc 1
+    competence: Gérer un espace partagé de fabrication
+    objectives:
+      - En intégrant l'histoire et l'écosystème de la fabrication numérique et sa diversité (fablabs, techshops, makerspaces, etc.)
+      - En s'engageant dans une dynamique territoriale et de réseau
+      - En intégrant les enjeux de la transition écologique et sociétale
+    color: "#00d4ff"
+    color_light: "#0088b8"
+
+  - id: communaute
+    number: 2
+    name: Créer, animer, développer une communauté d'utilisateur·rices
+    short_name: Bloc 2
+    competence: Animer le lieu de manière à constituer une communauté active et impliquée
+    objectives:
+      - En suscitant les échanges et en créant les conditions nécessaires au partage
+      - En accompagnant la mise en place de projets élaborés par les utilisateur·rices
+    color: "#00ff88"
+    color_light: "#0d9468"
+
+  - id: faciliter
+    number: 3
+    name: Se positionner en facilitateur·rice de projets
+    short_name: Bloc 3
+    competence: S'engager dans une posture de facilitateur·rice permettant l'apprentissage par le Faire
+    objectives:
+      - En mettant en place des outils adaptés (documents, tutoriels, etc.)
+      - En identifiant les communautés et les personnes ressources et en créant du lien
+      - En décomposant des problèmes complexes en éléments simples
+    color: "#7b5cff"
+    color_light: "#6354c9"
+
+  - id: concevoir-fabriquer
+    number: 4
+    name: Concevoir et fabriquer
+    short_name: Bloc 4
+    competence: Accompagner les utilisateur·rices au fonctionnement des outils de conception et de fabrication
+    objectives:
+      - En faisant respecter les consignes de sécurité et la réglementation
+      - En garantissant la sécurité des biens et des personnes
+      - En faisant respecter le bon fonctionnement et l'exploitation des machines
+    color: "#ff6b9d"
+    color_light: "#d44a7e"

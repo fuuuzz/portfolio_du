@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{ $blocsCatalog := .Site.Data.blocs.items }}
+<article class="project-page section">
+  <div class="container">
+    <a href="{{ "/" | relURL }}#projets" class="back-link btn-ghost">← Retour aux projets</a>
+    <header class="project-header">
+      <h1 class="project-title gradient-text">{{ .Title }}</h1>
+      {{ with .Params.summary }}
+      <p class="project-lead">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    {{ with .Params.blocs }}
+    <section class="project-blocs" aria-labelledby="project-blocs-title">
+      <h2 id="project-blocs-title" class="project-blocs-title">Blocs du diplôme mobilisés</h2>
+      {{ partial "bloc-badges.html" (dict "blocs" . "catalog" $blocsCatalog "linked" true) }}
+    </section>
+    {{ end }}
+
+    {{ with .Params.images }}
+    <div class="project-gallery" aria-label="Galerie du projet">
+      {{ range . }}
+      <figure class="gallery-item card-glow">
+        <img src="{{ . | relURL }}" alt="" loading="lazy" width="800" height="500">
+      </figure>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="prose project-content card-glow">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,16 @@
+title: Logiciels
+items:
+  - name: Fusion 360
+    category: CAO
+  - name: FreeCAD
+    category: CAO
+  - name: Inkscape
+    category: Vectoriel
+  - name: LightBurn
+    category: Découpe laser
+  - name: Cura
+    category: Impression 3D
+  - name: KiCad
+    category: Électronique
+  - name: Arduino IDE
+    category: Programmation

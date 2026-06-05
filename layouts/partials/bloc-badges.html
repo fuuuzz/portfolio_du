@@ -1,0 +1,27 @@
+{{/* Badges — dict: "blocs", "catalog", "linked" (optional bool) */}}
+{{ $blocs := .blocs }}
+{{ $catalog := .catalog }}
+{{ $linked := .linked | default false }}
+{{ with $blocs }}
+<ul class="bloc-badges{{ if $linked }} bloc-badges--linked{{ end }}" aria-label="Blocs pédagogiques">
+  {{ range . }}
+    {{ $id := . }}
+    {{ if isset . "id" }}{{ $id = .id }}{{ end }}
+    {{ range $catalog }}
+      {{ if eq .id $id }}
+      <li>
+        {{ if $linked }}
+        <a href="{{ "/" | relURL }}#bloc-{{ .id }}" class="bloc-badge" style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}">
+          {{ partial "bloc-badge-label.html" (dict "bloc" .) }}
+        </a>
+        {{ else }}
+        <span class="bloc-badge" style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}">
+          {{ partial "bloc-badge-label.html" (dict "bloc" .) }}
+        </span>
+        {{ end }}
+      </li>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

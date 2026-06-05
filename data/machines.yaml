@@ -1,0 +1,18 @@
+title: Machines
+items:
+  - name: Découpeuse laser
+    description: Gravure et découpe de matériaux plastiques, bois, cuir, etc.
+  - name: Imprimante 3D
+    description: Prototypage plastique, réglage et post-traitement.
+  - name: Fraiseuse CNC
+    description: Usinage bois et matériaux tendres.
+  - name: Plotter de découpe
+    description: Stickers, transferts et marquage.
+  - name: Poste de soudure
+    description: Assemblages électroniques et réparations.
+  - name: Brodeuse numérique
+    description: Broderie et tissage textile.
+  - name: Micro-controlleurs
+    description: Programmation sur Arduino, Raspberry Pi.
+  - name: Atelier bois
+    description: Usinage et découpe de bois.
