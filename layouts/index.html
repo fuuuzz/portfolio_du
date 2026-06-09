@@ -41,9 +41,17 @@
       </p>
     </header>
 
-    <ul class="project-grid">
+    {{ partial "project-filter.html" (dict "catalog" $blocsCatalog) }}
+
+    <ul class="project-grid project-grid--filterable">
       {{ range $projets.ByDate.Reverse }}
-      <li>
+      {{ $blocIds := slice }}
+      {{ range .Params.blocs }}
+        {{ $id := . }}
+        {{ if isset . "id" }}{{ $id = .id }}{{ end }}
+        {{ $blocIds = $blocIds | append $id }}
+      {{ end }}
+      <li class="project-item" data-blocs="{{ delimit $blocIds " " }}">
         <a href="{{ .RelPermalink }}" class="project-card card-glow">
           {{ with .Params.featured_image }}
           <div class="project-card-media">
@@ -137,4 +145,8 @@
     </div>
   </div>
 </section>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/project-filter.js" | relURL }}"></script>
 {{ end }}

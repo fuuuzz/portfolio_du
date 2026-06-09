@@ -14,6 +14,8 @@
   {{ partial "footer.html" . }}
   <button type="button" class="scroll-top" id="scroll-top" aria-label="Remonter en haut de la page" hidden>↑</button>
   <script src="{{ "js/theme.js" | relURL }}"></script>
+  <script src="{{ "js/nav-menu.js" | relURL }}"></script>
   <script src="{{ "js/scroll-top.js" | relURL }}"></script>
+  {{ block "scripts" . }}{{ end }}
 </body>
 </html>

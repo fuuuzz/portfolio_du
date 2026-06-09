@@ -1,0 +1,21 @@
+{{/* Filtre projets — dict: "catalog" .Site.Data.blocs.items */}}
+{{ $catalog := .catalog }}
+<div class="project-filter" role="toolbar" aria-label="Filtrer les projets par bloc">
+  <button type="button" class="project-filter-btn is-active" data-bloc-filter="all" aria-pressed="true">
+    Tous les projets
+  </button>
+  {{ range $catalog }}
+  <button
+    type="button"
+    class="project-filter-btn"
+    data-bloc-filter="{{ .id }}"
+    data-tooltip="{{ .name }}"
+    aria-pressed="false"
+    aria-label="Bloc {{ .number }} — {{ .name }}"
+    style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}"
+  >
+    Bloc {{ .number }}
+  </button>
+  {{ end }}
+</div>
+<p class="project-filter-empty" id="project-filter-empty" hidden>Aucun projet pour ce bloc.</p>

@@ -1,5 +1,5 @@
 # Dev local : http://localhost:1313/
-# En production, GitHub Actions surcharge avec --baseURL (voir .github/workflows/hugo.yml)
+# Production : https://benoitpaquier.com/portfolio_du/ (voir HUGO_BASEURL dans .github/workflows/hugo.yaml)
 baseURL = 'http://localhost:1313/'
 languageCode = 'fr-fr'
 title = 'Portfolio Fab Manager'
@@ -18,7 +18,7 @@ disableKinds = ['taxonomy', 'term']
   [params.profile]
     name = 'Benoit Paquier'
     title = 'Étudiant Fabmanager'
-    image = '/images/profile.svg'
+    image = '/images/profile.png'
     text = '''
 Je suis étudiant·e en formation Fab Manager. Passionné·e par la fabrication numérique,
 le prototypage rapide et l'accompagnement des usagers en fablab, je conçois et réalise

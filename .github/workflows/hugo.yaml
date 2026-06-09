@@ -23,6 +23,8 @@ jobs:
       HUGO_VERSION: 0.163.0
       NODE_VERSION: 24.16.0
       TZ: Europe/Oslo
+      # Domaine custom + dépôt projet (sous-chemin /portfolio_du)
+      HUGO_BASEURL: https://benoitpaquier.com/portfolio_du/
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -81,7 +83,7 @@ jobs:
           hugo build \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "${{ env.HUGO_BASEURL }}" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save

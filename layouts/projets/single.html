@@ -2,7 +2,7 @@
 {{ $blocsCatalog := .Site.Data.blocs.items }}
 <article class="project-page section">
   <div class="container">
-    <a href="{{ "/" | relURL }}#projets" class="back-link btn-ghost">← Retour aux projets</a>
+    <a href="{{ site.Home.RelPermalink }}#projets" class="back-link btn-ghost">← Retour aux projets</a>
     <header class="project-header">
       <h1 class="project-title gradient-text">{{ .Title }}</h1>
       {{ with .Params.summary }}
