@@ -1,5 +1,5 @@
 # Dev local : http://localhost:1313/
-# Production : https://benoitpaquier.com/portfolio_du/ (voir HUGO_BASEURL dans .github/workflows/hugo.yaml)
+# En production, GitHub Actions surcharge avec --baseURL (voir .github/workflows/hugo.yml)
 baseURL = 'http://localhost:1313/'
 languageCode = 'fr-fr'
 title = 'Portfolio Fab Manager'

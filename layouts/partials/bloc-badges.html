@@ -11,7 +11,7 @@
       {{ if eq .id $id }}
       <li>
         {{ if $linked }}
-        <a href="{{ site.Home.RelPermalink }}#bloc-{{ .id }}" class="bloc-badge" style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}">
+        <a href="{{ "/" | relURL }}#bloc-{{ .id }}" class="bloc-badge" style="--bloc-color: {{ .color }}; --bloc-color-light: {{ .color_light | default .color }}">
           {{ partial "bloc-badge-label.html" (dict "bloc" .) }}
         </a>
         {{ else }}

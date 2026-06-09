@@ -2,11 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url={{ site.Home.RelPermalink }}#projets">
-  <link rel="canonical" href="{{ site.Home.RelPermalink }}#projets">
+  <meta http-equiv="refresh" content="0; url={{ "/" | relURL }}#projets">
+  <link rel="canonical" href="{{ "/" | relURL }}#projets">
   <title>Projets — {{ .Site.Title }}</title>
 </head>
 <body>
-  <p><a href="{{ site.Home.RelPermalink }}#projets">Voir les projets</a></p>
+  <p><a href="{{ "/" | relURL }}#projets">Voir les projets</a></p>
 </body>
 </html>
