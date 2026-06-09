@@ -25,3 +25,7 @@ le prototypage rapide et l'accompagnement des usagers en fablab, je conçois et 
 des projets allant de la modélisation 3D à l'usinage, en passant par l'électronique et
 la documentation technique.
 '''
+
+caches:
+  images:
+    dir: :cacheDir/images

@@ -4,16 +4,16 @@ Portfolio pour le diplôme universitaire Fab Manager, généré avec [Hugo](http
 
 ## Structure
 
-| Fichier / dossier | Rôle |
-|-------------------|------|
-| `hugo.toml` | Configuration du site (URL, profil, contact) |
-| `data/skills.yaml` | Savoir-faire affichés sur l'accueil |
-| `data/software.yaml` | Logiciels maîtrisés |
-| `data/machines.yaml` | Machines utilisées |
-| `content/projets/*.md` | Un fichier = une page projet |
-| `layouts/` | Gabarits HTML |
-| `assets/css/main.css` | Styles |
-| `static/images/` | Images (profil, projets) |
+| Fichier / dossier      | Rôle                                         |
+| ---------------------- | -------------------------------------------- |
+| `hugo.toml`            | Configuration du site (URL, profil, contact) |
+| `data/skills.yaml`     | Savoir-faire affichés sur l'accueil          |
+| `data/software.yaml`   | Logiciels maîtrisés                          |
+| `data/machines.yaml`   | Machines utilisées                           |
+| `content/projets/*.md` | Un fichier = une page projet                 |
+| `layouts/`             | Gabarits HTML                                |
+| `assets/css/main.css`  | Styles                                       |
+| `static/images/`       | Images (profil, projets)                     |
 
 ## Personnalisation
 
