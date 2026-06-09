@@ -18,7 +18,7 @@ disableKinds = ['taxonomy', 'term']
   [params.profile]
     name = 'Benoit Paquier'
     title = 'Étudiant Fabmanager'
-    image = 'images/profile.jpg'
+    image = 'images/profile.png'
     text = '''
 Je suis étudiant·e en formation Fab Manager. Passionné·e par la fabrication numérique,
 le prototypage rapide et l'accompagnement des usagers en fablab, je conçois et réalise
