@@ -26,6 +26,6 @@ des projets allant de la modélisation 3D à l'usinage, en passant par l'électr
 la documentation technique.
 '''
 
-caches:
-  images:
-    dir: :cacheDir/images
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
