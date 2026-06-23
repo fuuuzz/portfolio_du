@@ -12,7 +12,9 @@
       let visible = 0;
 
       items.forEach(function (item) {
-        const blocs = (item.getAttribute("data-blocs") || "").split(/\s+/).filter(Boolean);
+        const blocs = (item.getAttribute("data-blocs") || "")
+          .split(/\s+/)
+          .filter(Boolean);
         const show = blocId === "all" || blocs.includes(blocId);
         item.hidden = !show;
         if (show) visible++;

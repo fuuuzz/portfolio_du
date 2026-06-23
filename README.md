@@ -1,70 +1,133 @@
-# Portfolio Fab Manager (Hugo)
+# Portfolio — Benoit Paquier
 
-Portfolio pour le diplôme universitaire Fab Manager, généré avec [Hugo](https://gohugo.io/) et déployable sur **GitHub Pages**.
+Site portfolio statique réalisé avec [Hugo](https://gohugo.io/), dans le cadre du **Diplôme Universitaire Fabmanager — Techniques de facilitation et fabrication numérique**.
 
-## Structure
+Il présente mon parcours, mes projets de fablab et les compétences mobilisées au regard du référentiel officiel du DU.
 
-| Fichier / dossier      | Rôle                                         |
-| ---------------------- | -------------------------------------------- |
-| `hugo.toml`            | Configuration du site (URL, profil, contact) |
-| `data/skills.yaml`     | Savoir-faire affichés sur l'accueil          |
-| `data/software.yaml`   | Logiciels maîtrisés                          |
-| `data/machines.yaml`   | Machines utilisées                           |
-| `content/projets/*.md` | Un fichier = une page projet                 |
-| `layouts/`             | Gabarits HTML                                |
-| `assets/css/main.css`  | Styles                                       |
-| `static/images/`       | Images (profil, projets)                     |
+**Site en ligne :** [https://fuuuzz.github.io/portfolio_du/](https://fuuuzz.github.io/portfolio_du/)
 
-## Personnalisation
+## Contenu du site
 
-1. **`hugo.toml`** — Renseignez `params.profile`, `author`, `email`, `github`. La `baseURL` est réglée pour le dev local ; en production, GitHub Actions applique automatiquement la bonne URL.
-2. **`data/*.yaml`** — Modifiez savoir-faire, logiciels et machines (affichés dans la section Compétences).
-3. **`static/images/profile.svg`** — Remplacez par votre photo (`profile.jpg` et mettez à jour le chemin dans `hugo.toml`).
-4. **Projets** — Ajoutez un fichier dans `content/projets/` :
+- **Présentation** — photo, texte d'introduction et coordonnées
+- **Projets** — fiches détaillées (contexte, démarche, compétences) avec filtrage par blocs de compétences du DU
+- **Savoir-faire & outils** — compétences techniques, logiciels et machines
+- **Blocs de compétences** — les 4 blocs du référentiel Fabmanager
 
-```bash
-hugo new content projets/mon-projet.md
-```
+## Stack technique
 
-Exemple de front matter :
+| Élément     | Détail                                     |
+| ----------- | ------------------------------------------ |
+| Générateur  | Hugo (version Extended)                    |
+| Langue      | Français                                   |
+| Styles      | CSS custom (`assets/css/main.css`)         |
+| Déploiement | GitHub Pages via GitHub Actions            |
+| Thème       | Layouts personnalisés (pas de thème tiers) |
 
-```yaml
----
-title: Titre du projet
-date: 2025-06-01
-summary: Courte description pour l'aperçu sur l'accueil
-featured_image: /images/projets/mon-projet-thumb.jpg
-images:
-  - /images/projets/mon-projet-1.jpg
-  - /images/projets/mon-projet-2.jpg
----
-```
+## Prérequis
 
-Placez vos images dans `static/images/projets/`.
+- [Hugo Extended](https://gohugo.io/installation/) (v0.120 ou supérieur recommandé)
+- Git
 
-## Développement local
+Vérifier l'installation :
 
 ```bash
+hugo version
+# doit afficher « extended » dans la version
+```
+
+### Installation de Hugo (macOS)
+
+```bash
+brew install hugo
+```
+
+## Installation et développement local
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/fuuuzz/portfolio_du.git
+cd portfolio_du
+
+# Lancer le serveur de développement
 hugo server -D
 ```
 
-Ouvrez http://localhost:1313/
+Le site est accessible sur [http://localhost:1313/](http://localhost:1313/). Les modifications dans `content/`, `layouts/`, `assets/` et `data/` sont rechargées automatiquement.
 
-## Déploiement sur GitHub Pages
-
-1. Créez un dépôt GitHub (ex. `portfolio_du`).
-2. Poussez ce projet sur la branche `main`.
-3. Dans le dépôt : **Settings → Pages → Build and deployment → Source** : choisissez **GitHub Actions**.
-4. Le workflow `.github/workflows/hugo.yml` publiera le site à chaque push.
-
-L'URL sera : `https://VOTRE-USERNAME.github.io/NOM-DU-DEPOT/`
-
-> Le workflow CI passe `--baseURL` automatiquement à partir du nom du dépôt. Pas besoin de modifier `hugo.toml` pour GitHub Pages.
-
-## Build de production
+### Build de production en local
 
 ```bash
 hugo --minify
 ```
 
-Le site statique est généré dans `public/`.
+Les fichiers générés se trouvent dans le dossier `public/` (ignoré par Git).
+
+## Structure du projet
+
+```
+portfolio_du/
+├── content/
+│   └── projets/          # Fiches projets (Markdown + front matter)
+├── data/
+│   ├── blocs.yaml        # Référentiel des 4 blocs de compétences
+│   ├── skills.yaml       # Savoir-faire techniques
+│   ├── software.yaml     # Logiciels maîtrisés
+│   └── machines.yaml     # Machines et équipements
+├── layouts/              # Templates HTML Hugo
+├── assets/css/           # Feuilles de style source
+├── static/               # Fichiers statiques (images, JS)
+├── hugo.toml             # Configuration du site
+└── .github/workflows/    # CI/CD GitHub Pages
+```
+
+## Ajouter ou modifier du contenu
+
+### Informations générales
+
+Éditer `hugo.toml` : auteur, description, e-mail, GitHub, texte de présentation et photo de profil.
+
+### Nouveau projet
+
+Créer un fichier dans `content/projets/`, par exemple `mon-projet.md` :
+
+```markdown
+---
+title: Titre du projet
+date: 2025-06-01
+summary: Résumé court affiché sur la carte projet.
+featured_image: /images/projets/mon-projet.svg
+images:
+  - /images/projets/mon-projet.svg
+blocs:
+  - id: concevoir-fabriquer
+    note: Lien avec le bloc et justification courte.
+draft: false
+---
+
+## Contexte
+
+...
+
+## Démarche
+
+...
+```
+
+Les identifiants de blocs disponibles sont définis dans `data/blocs.yaml` (`gerer-fablab`, `communaute`, `faciliter`, `concevoir-fabriquer`).
+
+### Compétences, logiciels et machines
+
+Modifier les fichiers YAML correspondants dans `data/`.
+
+## Déploiement
+
+Le déploiement est automatisé : à chaque push sur `main`, GitHub Actions build le site avec Hugo Extended et le publie sur GitHub Pages.
+
+1. Activer **GitHub Pages** dans les paramètres du dépôt (source : _GitHub Actions_)
+2. Pousser sur la branche `main`
+
+```bash
+git push origin main
+```
+
+Le workflow `.github/workflows/hugo.yml` génère le site avec la bonne `baseURL` (`https://<owner>.github.io/<repo>/`).

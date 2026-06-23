@@ -1,7 +1,16 @@
-{{/* Filtre projets — dict: "catalog" .Site.Data.blocs.items */}}
-{{ $catalog := .catalog }}
-<div class="project-filter" role="toolbar" aria-label="Filtrer les projets par bloc">
-  <button type="button" class="project-filter-btn is-active" data-bloc-filter="all" aria-pressed="true">
+{{/* Filtre projets — dict: "catalog" .Site.Data.blocs.items */}} {{ $catalog :=
+.catalog }}
+<div
+  class="project-filter"
+  role="toolbar"
+  aria-label="Filtrer les projets par bloc"
+>
+  <button
+    type="button"
+    class="project-filter-btn is-active"
+    data-bloc-filter="all"
+    aria-pressed="true"
+  >
     Tous les projets
   </button>
   {{ range $catalog }}
@@ -18,4 +27,6 @@
   </button>
   {{ end }}
 </div>
-<p class="project-filter-empty" id="project-filter-empty" hidden>Aucun projet pour ce bloc.</p>
+<p class="project-filter-empty" id="project-filter-empty" hidden>
+  Aucun projet pour ce bloc.
+</p>

@@ -4,12 +4,14 @@
       <span class="logo-mark">◆</span>
       {{ .Site.Params.profile.name | default .Site.Title }}
     </p>
-    <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }} — Portfolio Fab Manager</p>
+    <p class="footer-copy">
+      &copy; {{ now.Year }} {{ .Site.Params.author }} — Portfolio - Benoit
+      Paquier - Diplôme universitaire Fabmanager
+    </p>
     <div class="footer-links">
       {{ with .Site.Params.email }}
       <a href="mailto:{{ . }}">Contact</a>
-      {{ end }}
-      {{ with .Site.Params.github }}
+      {{ end }} {{ with .Site.Params.github }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>
       {{ end }}
     </div>

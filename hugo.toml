@@ -2,7 +2,7 @@
 # En production, GitHub Actions surcharge avec --baseURL (voir .github/workflows/hugo.yml)
 baseURL = 'http://localhost:1313/'
 languageCode = 'fr-fr'
-title = 'Portfolio Fab Manager'
+title = 'Portfolio - Benoit Paquier - Diplôme universitaire Fabmanager'
 defaultContentLanguage = 'fr'
 disableKinds = ['taxonomy', 'term']
 
@@ -20,10 +20,13 @@ disableKinds = ['taxonomy', 'term']
     title = 'Étudiant Fabmanager'
     image = 'images/profile.png'
     text = '''
-Je suis étudiant·e en formation Fab Manager. Passionné·e par la fabrication numérique,
-le prototypage rapide et l'accompagnement des usagers en fablab, je conçois et réalise
-des projets allant de la modélisation 3D à l'usinage, en passant par l'électronique et
-la documentation technique.
+En reconversion vers le métier de fabmanager, je combine une solide expérience en développement web
+(depuis 2015, en France et au Canada) et en formation (en tant que formateur en au métier de
+développeur web). Actuellement en formation pour obtenir le Diplôme Universitaire Fabmanager –
+Techniques de facilitation & de fabrication numérique, je mets à profit mes compétences techniques,
+mon autonomie et mon sens pédagogique pour accompagner les utilisateurs des fablabs et leur projets.
+Rigoureux, communicant et passionné par la transmission, je m’engage à créer des environnements de
+travail stimulants et inclusifs.
 '''
 
 [caches]

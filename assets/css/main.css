@@ -66,7 +66,9 @@ body {
   line-height: 1.65;
   color: var(--color-text);
   background: var(--color-bg);
-  transition: background var(--transition), color var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
 img {
@@ -85,7 +87,10 @@ a:hover {
   color: var(--color-accent-3);
 }
 
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 .hero-title,
 .section-title,
 .project-title,
@@ -115,7 +120,11 @@ h1, h2, h3, h4,
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 70%);
+  mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    black 20%,
+    transparent 70%
+  );
 }
 
 .bg-glow {
@@ -196,7 +205,9 @@ h1, h2, h3, h4,
   letter-spacing: 0.05em;
   padding: 0.25rem 0;
   border-bottom: 1px solid transparent;
-  transition: color var(--transition), border-color var(--transition);
+  transition:
+    color var(--transition),
+    border-color var(--transition);
 }
 
 .nav a:hover {
@@ -216,7 +227,9 @@ h1, h2, h3, h4,
   border-radius: var(--radius-sm);
   background: var(--color-surface);
   cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .nav-toggle-bar {
@@ -226,7 +239,9 @@ h1, h2, h3, h4,
   margin-inline: auto;
   border-radius: 1px;
   background: var(--color-text);
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .nav-toggle:hover {
@@ -316,7 +331,9 @@ h1, h2, h3, h4,
   color: var(--color-text);
   cursor: pointer;
   font-size: 1.1rem;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .theme-toggle:hover {
@@ -324,8 +341,12 @@ h1, h2, h3, h4,
   box-shadow: var(--glow);
 }
 
-[data-theme="dark"] .theme-icon--sun { display: none; }
-[data-theme="light"] .theme-icon--moon { display: none; }
+[data-theme="dark"] .theme-icon--sun {
+  display: none;
+}
+[data-theme="light"] .theme-icon--moon {
+  display: none;
+}
 
 /* Retour en haut */
 .scroll-top {
@@ -349,7 +370,11 @@ h1, h2, h3, h4,
   box-shadow: var(--shadow);
   opacity: 0;
   transform: translateY(0.5rem);
-  transition: opacity 0.2s ease, transform 0.2s ease, border-color var(--transition), box-shadow var(--transition);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    border-color var(--transition),
+    box-shadow var(--transition);
   pointer-events: none;
 }
 
@@ -528,7 +553,10 @@ h1, h2, h3, h4,
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
 }
 
 .card-glow:hover {
@@ -616,7 +644,11 @@ h1, h2, h3, h4,
   padding: 1.15rem 1.25rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--bloc-color, var(--color-accent)) 4%, var(--color-surface));
+  background: color-mix(
+    in srgb,
+    var(--bloc-color, var(--color-accent)) 4%,
+    var(--color-surface)
+  );
   scroll-margin-top: 5.5rem;
 }
 
@@ -733,7 +765,11 @@ h1, h2, h3, h4,
   line-height: 1.35;
   border: 1px solid var(--bloc-color, var(--color-accent));
   color: var(--bloc-color, var(--color-accent));
-  background: color-mix(in srgb, var(--bloc-color, var(--color-accent)) 16%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--bloc-color, var(--color-accent)) 16%,
+    transparent
+  );
 }
 
 .project-card .bloc-badge,
@@ -742,9 +778,21 @@ h1, h2, h3, h4,
 }
 
 [data-theme="light"] .bloc-badge {
-  border-color: color-mix(in srgb, var(--bloc-color-light, var(--bloc-color)) 45%, var(--color-border));
-  color: color-mix(in srgb, var(--bloc-color-light, var(--bloc-color)) 88%, var(--color-text));
-  background: color-mix(in srgb, var(--bloc-color-light, var(--bloc-color)) 22%, var(--color-surface));
+  border-color: color-mix(
+    in srgb,
+    var(--bloc-color-light, var(--bloc-color)) 45%,
+    var(--color-border)
+  );
+  color: color-mix(
+    in srgb,
+    var(--bloc-color-light, var(--bloc-color)) 88%,
+    var(--color-text)
+  );
+  background: color-mix(
+    in srgb,
+    var(--bloc-color-light, var(--bloc-color)) 22%,
+    var(--color-surface)
+  );
 }
 
 .bloc-badge--inline {
@@ -753,7 +801,10 @@ h1, h2, h3, h4,
 
 a.bloc-badge {
   text-decoration: none;
-  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
 }
 
 a.bloc-badge:hover {
@@ -863,7 +914,11 @@ a.bloc-badge:hover {
   background: var(--color-surface);
   color: var(--color-muted);
   cursor: pointer;
-  transition: border-color var(--transition), color var(--transition), background var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -891,7 +946,10 @@ a.bloc-badge:hover {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    transition:
+      opacity var(--transition),
+      transform var(--transition),
+      visibility var(--transition);
   }
 
   .project-filter-btn[data-tooltip]:hover::after {
@@ -909,14 +967,26 @@ a.bloc-badge:hover {
 .project-filter-btn.is-active {
   border-color: var(--bloc-color, var(--color-accent));
   color: var(--bloc-color, var(--color-accent));
-  background: color-mix(in srgb, var(--bloc-color, var(--color-accent)) 14%, var(--color-surface));
+  background: color-mix(
+    in srgb,
+    var(--bloc-color, var(--color-accent)) 14%,
+    var(--color-surface)
+  );
   box-shadow: var(--glow);
 }
 
 [data-theme="light"] .project-filter-btn.is-active {
   color: var(--bloc-color-light, var(--bloc-color, var(--color-accent)));
-  border-color: color-mix(in srgb, var(--bloc-color-light, var(--bloc-color)) 50%, var(--color-border));
-  background: color-mix(in srgb, var(--bloc-color-light, var(--bloc-color)) 18%, var(--color-surface));
+  border-color: color-mix(
+    in srgb,
+    var(--bloc-color-light, var(--bloc-color)) 50%,
+    var(--color-border)
+  );
+  background: color-mix(
+    in srgb,
+    var(--bloc-color-light, var(--bloc-color)) 18%,
+    var(--color-surface)
+  );
 }
 
 .project-filter-btn[data-bloc-filter="all"].is-active {
