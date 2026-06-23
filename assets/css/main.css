@@ -1021,7 +1021,7 @@ a.bloc-badge:hover {
   display: flex;
   flex-direction: column;
   color: inherit;
-  overflow: visible;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -1032,6 +1032,7 @@ a.bloc-badge:hover {
 .project-card-media {
   overflow: hidden;
   border-bottom: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
 }
 
 .project-card img {

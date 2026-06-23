@@ -1,12 +1,10 @@
 ---
-title: Boîte d'organisation modulaire
-date: 2025-03-15
-summary: Système de rangement modulaire conçu en CAO et découpé au laser.
-featured_image: /images/projets/boite-1.svg
+title: Animation de l'atelier "Lampe éco-créative"
+date: 2026-03-21
+summary: Animation d'un atelier de création de lampes avec du matériel de récupération (vaisselles, piles, LEDS)
+featured_image: /images/projets/atelier-lampe-eco-creative/feature-image.JPG
 images:
-  - /images/projets/boite-1.svg
-  - /images/projets/boite-2.svg
-  - /images/projets/boite-3.svg
+  - /images/projets/atelier-lampe-eco-creative/feature-image.JPG
 blocs:
   - id: concevoir-fabriquer
     note: Conception paramétrique, découpe laser, respect des consignes machines et finitions pour un usage en atelier.

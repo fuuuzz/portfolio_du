@@ -1,7 +1,10 @@
-{{/* Carte référentiel bloc — dict: "bloc" (item catalog), "compact" (bool, optional) */}}
-{{ $b := .bloc }}
-{{ $compact := .compact | default false }}
-<article id="bloc-{{ $b.id }}" class="bloc-catalog-card{{ if $compact }} bloc-catalog-card--compact{{ end }}" style="--bloc-color: {{ $b.color }}; --bloc-color-light: {{ $b.color_light | default $b.color }}">
+{{/* Carte référentiel bloc — dict: "bloc" (item catalog), "compact" (bool,
+optional) */}} {{ $b := .bloc }} {{ $compact := .compact | default false }}
+<article
+  id="bloc-{{ $b.id }}"
+  class="bloc-catalog-card{{ if $compact }} bloc-catalog-card--compact{{ end }}"
+  style="--bloc-color: {{ $b.color }}; --bloc-color-light: {{ $b.color_light | default $b.color }}"
+>
   <span class="bloc-badge bloc-badge--catalog">
     {{ partial "bloc-badge-label.html" (dict "bloc" $b) }}
   </span>
