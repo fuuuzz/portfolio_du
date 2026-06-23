@@ -18,7 +18,7 @@ disableKinds = ['taxonomy', 'term']
   [params.profile]
     name = 'Benoit Paquier'
     title = 'Étudiant Fabmanager'
-    image = 'images/profile.png'
+    image = 'images/profile.webp'
     text = '''
 En reconversion vers le métier de fabmanager, je combine une solide expérience en développement web
 (depuis 2015, en France et au Canada) et en formation (en tant que formateur en au métier de

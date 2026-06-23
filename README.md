@@ -4,7 +4,7 @@ Site portfolio statique réalisé avec [Hugo](https://gohugo.io/), dans le cadre
 
 Il présente mon parcours, mes projets de fablab et les compétences mobilisées au regard du référentiel officiel du DU.
 
-**Site en ligne :** [https://fuuuzz.github.io/portfolio_du/](https://fuuuzz.github.io/portfolio_du/)
+**Site en ligne :** [https://portfiolio-du-benoitpaquier.netlify.app/](https://portfiolio-du-benoitpaquier.netlify.app/)
 
 ## Contenu du site
 
@@ -20,7 +20,7 @@ Il présente mon parcours, mes projets de fablab et les compétences mobilisées
 | Générateur  | Hugo (version Extended)                    |
 | Langue      | Français                                   |
 | Styles      | CSS custom (`assets/css/main.css`)         |
-| Déploiement | GitHub Pages via GitHub Actions            |
+| Déploiement | Netlify                                    |
 | Thème       | Layouts personnalisés (pas de thème tiers) |
 
 ## Prérequis

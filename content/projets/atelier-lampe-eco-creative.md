@@ -1,31 +1,25 @@
 ---
-title: Animation de l'atelier "Lampe éco-créative"
+title: Atelier "Lampe éco-créative"
 date: 2026-03-21
-summary: Animation d'un atelier de création de lampes avec du matériel de récupération (vaisselles, piles, LEDS)
-featured_image: /images/projets/atelier-lampe-eco-creative/feature-image.JPG
+summary: Animation de l'atelier de création de lampes avec du matériel de récupération (vaisselles, piles, LEDS)
+featured_image: /images/projets/atelier-lampe-eco-creative/feature-image.webp
 images:
-  - /images/projets/atelier-lampe-eco-creative/feature-image.JPG
+  - /images/projets/atelier-lampe-eco-creative/feature-image.webp
+  - /images/projets/atelier-lampe-eco-creative/panneau.webp
+  - /images/projets/atelier-lampe-eco-creative/material.webp
+  - /images/projets/atelier-lampe-eco-creative/crowd.webp
+  - /images/projets/atelier-lampe-eco-creative/soudure.webp
+  - /images/projets/atelier-lampe-eco-creative/pile.webp
+  - /images/projets/atelier-lampe-eco-creative/photo.webp
 blocs:
-  - id: concevoir-fabriquer
-    note: Conception paramétrique, découpe laser, respect des consignes machines et finitions pour un usage en atelier.
+  - id: communaute
   - id: faciliter
-    note: Fiche d'assemblage et transmission aux usagers pour reproduire le projet en autonomie.
-  - id: gerer-fablab
-    note: Réponse à un besoin d'organisation de l'espace atelier du fablab.
+links:
+  - label: Atelier "Lampe éco-créative"
+    url: https://trite-cobra-9df.notion.site/Animation-de-l-atelier-Lampe-co-cr-ative-32d226f095eb8043ae3ad802f9100684
 draft: false
 ---
 
 ## Contexte
 
-Projet réalisé dans le cadre du module « conception pour la fabrication ». L'objectif était de concevoir un système de rangement modulaire pour l'atelier du fablab, en optimisant les assemblages pour la découpe laser.
-
-## Démarche
-
-1. **Recherche** — Analyse des besoins de rangement et des contraintes d'espace.
-2. **Modélisation** — Conception paramétrique sous Fusion 360 avec tenons et rainures.
-3. **Prototypage** — Tests sur chutes de contreplaqué 3 mm avant série finale.
-4. **Fabrication** — Découpe laser, assemblage sans colle grâce aux emboîtements.
-
-## Résultat
-
-Ensemble de 6 modules empilables, livrés avec une fiche d'assemblage pour les usagers du fablab. Temps de découpe optimisé grâce au nesting des pièces sur une planche 600×400 mm.
+Tous les samedis et dimanche après-midi, Villette Makerz s'ouvre au grand public, avec différents ateliers chaque semaine. Dans le cadre de mon stage, j'ai eu la chance de pouvoir animer le temps d'un week end l'atelier "Lampe éco-créative", qui consiste à récupérer du matériel usagé pour designer et créer des lampes.Le matériel à disposition est surtout de la vaiselle recyclée : ecocups, assiettes en plastiques, cagettes, bols, etc. Ces pièces ont été peintes en amont, et sont ensuite utilisées pour que le public puisse concevoir sa propre lampe. Mon rôle a été d'accompagner les petits et grands dans le choix de leur matériel, l'assemblage, la soudure, et le branchement de la pile. À la fin de l'atelier, les participant.es ont pu prendre en photo leur création.

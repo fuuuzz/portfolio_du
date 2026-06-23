@@ -1,5 +1,12 @@
 {{ define "main" }}
 {{ $blocsCatalog := .Site.Data.blocs.items }}
+{{ $featured := .Params.featured_image }}
+{{ $others := slice }}
+{{ range .Params.images }}
+  {{ if ne . $featured }}
+    {{ $others = $others | append . }}
+  {{ end }}
+{{ end }}
 <article class="project-page section">
   <div class="container">
     <a href="{{ "/" | relURL }}#projets" class="back-link btn-ghost">← Retour aux projets</a>
@@ -10,26 +17,60 @@
       {{ end }}
     </header>
 
-    {{ with .Params.blocs }}
-    <section class="project-blocs" aria-labelledby="project-blocs-title">
-      <h2 id="project-blocs-title" class="project-blocs-title">Blocs du diplôme mobilisés</h2>
-      {{ partial "bloc-badges.html" (dict "blocs" . "catalog" $blocsCatalog "linked" true) }}
-    </section>
-    {{ end }}
-
-    {{ with .Params.images }}
-    <div class="project-gallery" aria-label="Galerie du projet">
-      {{ range . }}
-      <figure class="gallery-item card-glow">
-        <img src="{{ . | relURL }}" alt="" loading="lazy" width="800" height="500">
-      </figure>
+    <div class="project-content card-glow">
+      {{ with .Params.blocs }}
+      <div class="project-blocs" aria-label="Blocs du diplôme mobilisés">
+        <p class="project-blocs-title">Blocs du diplôme mobilisés</p>
+        {{ partial "bloc-badges.html" (dict "blocs" . "catalog" $blocsCatalog "linked" true) }}
+      </div>
       {{ end }}
-    </div>
-    {{ end }}
 
-    <div class="prose project-content card-glow">
-      {{ .Content }}
+      <div class="prose project-body">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.links }}
+      <div class="project-links-section">
+        <h2 class="project-links-title">{{ $.Params.links_title | default "En savoir plus" }}</h2>
+        <nav class="project-links" aria-label="{{ $.Params.links_title | default "En savoir plus" }}">
+          {{ range . }}
+          <a
+            href="{{ .url }}"
+            class="project-link"
+            {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener noreferrer"{{ end }}
+          >{{ .label }}</a>
+          {{ end }}
+        </nav>
+      </div>
+      {{ end }}
+
+      {{ if or $featured $others }}
+      <div class="project-gallery" aria-label="Galerie du projet">
+        {{ with $featured }}
+        <button type="button" class="gallery-item gallery-item--featured card-glow" aria-label="Agrandir l'image">
+          <img
+            src="{{ . | relURL }}"
+            alt="{{ $.Title }}"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="800"
+            height="800"
+          >
+        </button>
+        {{ end }}
+        {{ range $others }}
+        <button type="button" class="gallery-item card-glow" aria-label="Agrandir l'image">
+          <img src="{{ . | relURL }}" alt="" loading="lazy" width="400" height="400">
+        </button>
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
   </div>
 </article>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/gallery-lightbox.js" | relURL }}"></script>
 {{ end }}

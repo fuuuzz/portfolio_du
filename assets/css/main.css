@@ -813,7 +813,9 @@ a.bloc-badge:hover {
 }
 
 .project-blocs {
-  margin: 3.5rem 0 4rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .project-blocs-title {
@@ -1114,28 +1116,327 @@ a.bloc-badge:hover {
   margin: 0;
 }
 
+.project-hero {
+  margin: 1.75rem 0 2.5rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-hero img {
+  display: block;
+  width: 100%;
+  height: min(72vh, 680px);
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
   gap: 1rem;
-  margin: 2.5rem 0;
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .gallery-item {
   margin: 0;
   overflow: hidden;
   padding: 0;
+  aspect-ratio: 1;
+  min-height: 0;
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: zoom-in;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: var(--color-surface);
+}
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.gallery-item--featured {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  aspect-ratio: 1;
 }
 
 .gallery-item img {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item--featured {
+    grid-column: 1 / span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item--featured {
+    grid-column: 1;
+    grid-row: span 1;
+  }
 }
 
 .project-content {
+  width: 100%;
   padding: 2rem 2.25rem;
-  max-width: 72ch;
+  margin-top: 1.75rem;
+}
+
+.project-content.card-glow,
+.project-content.card-glow:hover,
+.lightbox-panel.card-glow,
+.lightbox-panel.card-glow:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.project-content.card-glow:hover,
+.lightbox-panel.card-glow:hover {
+  border-color: var(--color-border);
+}
+
+.project-gallery .gallery-item.card-glow:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.project-gallery .gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.project-body {
+  width: 100%;
+}
+
+.project-links-section {
+  margin-top: 2rem;
+}
+
+.project-links-title {
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+  color: var(--color-text);
+}
+
+.project-links {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.project-link::after {
+  content: " →";
+}
+
+.project-link:hover {
+  color: var(--color-accent-3);
+}
+
+/* Lightbox galerie projet */
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--color-bg) 20%, rgba(0, 0, 0, 0.82));
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-panel {
+  position: relative;
+  z-index: 1;
+  width: min(96vw, 1100px);
+  max-height: 92vh;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.lightbox-figure {
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: min(78vh, 820px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.lightbox-caption {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.lightbox-counter {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  letter-spacing: 0.06em;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  font-family: var(--font-body);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.lightbox-nav {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lightbox-next {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: var(--glow);
+}
+
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .lightbox-panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    width: 100%;
+    padding: 3rem 0.5rem 1rem;
+  }
+
+  .lightbox-figure {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .lightbox-nav {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .lightbox-prev {
+    left: 0.25rem;
+  }
+
+  .lightbox-next {
+    right: 0.25rem;
+    left: auto;
+  }
+
+  .lightbox-counter {
+    grid-row: 3;
+  }
 }
 
 /* Prose */
