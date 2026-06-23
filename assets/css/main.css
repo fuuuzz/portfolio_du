@@ -1093,6 +1093,23 @@ a.bloc-badge:hover {
   color: var(--color-accent-3);
 }
 
+.project-section-footer {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.project-section-note {
+  margin: 0 auto 1rem;
+  max-width: 40rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.project-section-cta {
+  margin-top: 0;
+}
+
 /* Project page */
 .project-page {
   padding-top: 2rem;

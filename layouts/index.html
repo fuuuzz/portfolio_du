@@ -75,6 +75,17 @@
       </li>
       {{ end }}
     </ul>
+
+    <div class="project-section-footer">
+      <p class="project-section-note">
+        Il s'agit d'une liste non exhaustive des projets réalisés dans le cadre du diplôme universitaire fabmanager.
+      </p>
+      {{ with .Site.Params.all_projects_url }}
+      <a href="{{ . }}" class="btn-ghost project-section-cta" target="_blank" rel="noopener noreferrer">
+        Voir la totalité des projets →
+      </a>
+      {{ end }}
+    </div>
   </div>
 </section>
 
