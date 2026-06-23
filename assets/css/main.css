@@ -1175,6 +1175,58 @@ a.bloc-badge:hover {
   transition: transform 0.35s ease;
 }
 
+.gallery-item:not(.gallery-file) {
+  border: none;
+  background: none;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--color-text) 10%, transparent);
+  border-radius: var(--radius);
+  transition: box-shadow 0.35s ease;
+}
+
+.gallery-file {
+  cursor: default;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.gallery-file-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.gallery-file-link:hover {
+  color: inherit;
+}
+
+.gallery-file-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+
+.gallery-file-name {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+  word-break: break-word;
+}
+
 @media (max-width: 768px) {
   .project-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -1216,10 +1268,16 @@ a.bloc-badge:hover {
   border-color: var(--color-border);
 }
 
-.project-gallery .gallery-item.card-glow:hover {
+.project-gallery .gallery-file:hover {
   border-color: var(--color-accent);
   box-shadow: var(--glow);
   transform: translateY(-2px);
+}
+
+.project-gallery .gallery-item:not(.gallery-file):hover {
+  border: none;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--color-text) 14%, transparent);
+  transform: none;
 }
 
 .project-gallery .gallery-item:hover img {

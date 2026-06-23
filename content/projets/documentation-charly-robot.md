@@ -2,9 +2,14 @@
 title: Documentation Charly Robot
 date: 2026-03-22
 summary: Rédaction de la documentation concernant la CNC Charly Robot à Villette Makers
-featured_image: /images/projets/atelier-lampe-eco-creative/feature-image.webp
+featured_image: /images/projets/documentation-charly-robot/feature-image.webp
 images:
-  - /images/projets/atelier-lampe-eco-creative/feature-image.webp
+  - /images/projets/documentation-charly-robot/feature-image.webp
+files:
+  - file: /files/documentation-charly-robot/pas-a-pas.pdf
+    label: Pas à pas Charly Robot 2U
+  - file: /files/documentation-charly-robot/guide-post-processeurs.pdf
+    label: Guide post-processeurs Fusion 360
 blocs:
   - id: communaute
   - id: faciliter

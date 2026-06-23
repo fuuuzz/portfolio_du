@@ -1,0 +1,21 @@
+{{/* dict: item, featured (bool), title */}}
+{{ $item := .item }}
+{{ $featured := .featured | default false }}
+{{ $title := .title }}
+
+<button
+  type="button"
+  class="gallery-item{{ if $featured }} gallery-item--featured{{ end }}"
+  data-gallery-src="{{ $item | relURL }}"
+  data-gallery-label="{{ if $featured }}{{ $title }}{{ end }}"
+  aria-label="Agrandir l'image"
+>
+  <img
+    src="{{ $item | relURL }}"
+    alt="{{ if $featured }}{{ $title }}{{ end }}"
+    {{ if $featured }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+    decoding="async"
+    width="{{ if $featured }}800{{ else }}400{{ end }}"
+    height="{{ if $featured }}800{{ else }}400{{ end }}"
+  >
+</button>

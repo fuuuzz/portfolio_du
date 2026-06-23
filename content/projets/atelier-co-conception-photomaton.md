@@ -1,10 +1,15 @@
 ---
-title: Atelier de co-conception d'un photomaton
-date: 2026-05-07
-summary: TODO
-featured_image: /images/projets/atelier-lampe-eco-creative/feature-image.webp
+title: Atelier de co-conception d'un photomaton [Projet SnapLab]
+date: 2026-06-07
+summary: Animation d'un atelier pour réaliser la co-conception d'un projet de photomaton à mettre dans les labs. Le projet s'appelle SnapLab
+featured_image: /images/projets/atelier-co-conception-photomaton/feature-image.jpg
 images:
-  - /images/projets/atelier-lampe-eco-creative/feature-image.webp
+  - /images/projets/atelier-co-conception-photomaton/atelier1.jpg
+  - /images/projets/atelier-co-conception-photomaton/atelier2.jpg
+  - /images/projets/atelier-co-conception-photomaton/drawing1.jpg
+  - /images/projets/atelier-co-conception-photomaton/drawing2.jpg
+  - /images/projets/atelier-co-conception-photomaton/drawing3.jpg
+  - /images/projets/atelier-co-conception-photomaton/drawing4.jpg
 blocs:
   - id: gerer-fablab
   - id: communaute
@@ -18,4 +23,6 @@ draft: false
 
 ## Contexte
 
-Dans le cadre de mon stage à Villette Makerz, j'ai eu la chance de pouvoir travailler à la création d'activité autour d'une Charly Robot, une CNC qui n'était pas utilisée dans le fablab. La finalité de mon stage étatit d'animer des initiations autour de la machine, pour que les participant.es puissent l'utiliser en autonomie. À Villette Makerz, les résident.es peuvent utiliser les machines via leur abonnement au lieu. Pour le grand public, les usitilsateurices peuvent louer les machines pour les utiliser. Dans tous les cas, il faut avoir fait une initiation au préalable. Pour les résident.es, la plupart du temps nous prenions une demie journée car chacune et chaucun avaient une idée de projet bien précise. Pour le grand public, l'initiation se faisait sur 2 heures, avec un objet déja modélisé : une bague de lecture. L'idée des initiations est de se concentrer principalement sur le paramêtrage d'usinage dans Fusion360, ensuite sur l'export, et enfin sur la machine. J'ai pu animer une quinzaine d'initiations, avec environ la moitié avec les résident.es en solo, et l'autre moitié avec le grand public qui venait en petits groupd de 1 à 3 personnes.
+Dans le cadre du projet de fabrication à réaliser pour la soutenance du diplôme, je souhaite réaliser un photomaton à installer dans les labs ou les tiers-lieux. L’idée c’est de créer de l’interaction entre les membres des communautés des différents lieux. Dans cette optique, je me suis dit que ça pouvait être intéressant de faire ce projet de fabrication avec les membres de la communauté du Faclab. C’est pour cela que j’ai animé cet atelier de co-conception, durant lequel nous avons pu échanger et converger vers une idée commune du photomaton.
+
+L’objectif de cet atelier est d’avoir une idée claire et précise de l’objet, et de soulever des problématiques auxquelles il faudrait répondre pour que le photomaton soit adopté dans différents lieux.

@@ -1,0 +1,19 @@
+{{/* dict: file (string path or map with file/label) */}}
+{{ $entry := .file }}
+{{ $src := "" }}
+{{ $label := "" }}
+
+{{ if reflect.IsMap $entry }}
+  {{ $src = $entry.file }}
+  {{ $label = $entry.label | default ($src | path.Base | replace "+" " ") }}
+{{ else }}
+  {{ $src = $entry }}
+  {{ $label = $src | path.Base | replace "+" " " }}
+{{ end }}
+
+<div class="gallery-item gallery-file">
+  <a href="{{ $src | relURL }}" class="gallery-file-link" download>
+    <span class="gallery-file-icon" aria-hidden="true">↓</span>
+    <span class="gallery-file-name">{{ $label }}</span>
+  </a>
+</div>

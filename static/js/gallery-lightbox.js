@@ -3,14 +3,13 @@
     const gallery = document.querySelector(".project-gallery");
     if (!gallery) return;
 
-    const triggers = gallery.querySelectorAll(".gallery-item");
+    const triggers = gallery.querySelectorAll(".gallery-item:not(.gallery-file)");
     if (!triggers.length) return;
 
     const images = Array.from(triggers).map(function (trigger) {
-      const img = trigger.querySelector("img");
       return {
-        src: img.currentSrc || img.src,
-        alt: img.alt || "",
+        src: trigger.dataset.gallerySrc || "",
+        alt: trigger.dataset.galleryLabel || "",
       };
     });
 

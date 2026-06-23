@@ -4,6 +4,7 @@ date: {{ .Date }}
 summary: ""
 featured_image: ""
 images: []
+files: []
 blocs: []
 links: []
 draft: true

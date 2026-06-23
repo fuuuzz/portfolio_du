@@ -44,25 +44,16 @@
       </div>
       {{ end }}
 
-      {{ if or $featured $others }}
+      {{ if or $featured $others .Params.files }}
       <div class="project-gallery" aria-label="Galerie du projet">
         {{ with $featured }}
-        <button type="button" class="gallery-item gallery-item--featured card-glow" aria-label="Agrandir l'image">
-          <img
-            src="{{ . | relURL }}"
-            alt="{{ $.Title }}"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            width="800"
-            height="800"
-          >
-        </button>
+        {{ partial "gallery-item.html" (dict "item" . "featured" true "title" $.Title) }}
         {{ end }}
         {{ range $others }}
-        <button type="button" class="gallery-item card-glow" aria-label="Agrandir l'image">
-          <img src="{{ . | relURL }}" alt="" loading="lazy" width="400" height="400">
-        </button>
+        {{ partial "gallery-item.html" (dict "item" . "title" $.Title) }}
+        {{ end }}
+        {{ range .Params.files }}
+        {{ partial "gallery-file.html" (dict "file" .) }}
         {{ end }}
       </div>
       {{ end }}
