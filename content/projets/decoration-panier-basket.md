@@ -24,6 +24,7 @@ images:
   - /images/projets/panier-basket/19.jpeg
   - /images/projets/panier-basket/20.jpg
 blocs:
+  - id: gerer-fablab
   - id: concevoir-fabriquer
 links:
   - label: La Peintinoire

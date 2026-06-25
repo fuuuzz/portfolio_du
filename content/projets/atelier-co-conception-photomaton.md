@@ -1,6 +1,6 @@
 ---
-title: Atelier de co-conception d'un photomaton [Projet SnapLab]
-date: 2026-06-07
+title: Atelier de co-conception d'un photomaton
+date: 2026-06-20
 summary: Animation d'un atelier pour réaliser la co-conception d'un projet de photomaton à mettre dans les labs. Le projet s'appelle SnapLab
 featured_image: /images/projets/atelier-co-conception-photomaton/feature-image.jpg
 images:
@@ -18,6 +18,8 @@ blocs:
 links:
   - label: Atelier de co-conception d'un photomaton
     url: https://trite-cobra-9df.notion.site/Atelier-co-conception-d-un-photomaton-379226f095eb806c9ab1cfb3b2465bbc
+  - label: Dépot Github
+    url: https://github.com/fuuuzz/snaplab
 draft: false
 ---
 
