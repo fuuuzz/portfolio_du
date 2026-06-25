@@ -7,9 +7,9 @@ items:
   - name: Documentation
     description: Pas à pas, tutoriels, fiches techniques, signalétique, fiches de sécurité.
   - name: Programmation
-    description: Programmation en Javascript/Typescript, Python.
+    description: Programmation web Javascript/Typescript, programmation microcontrôleurs Python.
   - name: Modélisation
-    description: Dessin vectoriel, concpection 3D, paramétrique, paramétrage d'usinage.
+    description: Dessin vectoriel, conception 3D, paramétrique, paramétrage d'usinage.
   - name: Électronique
     description: Circuits simples, soudure, programmation microcontrôleurs.
   - name: Gestion de projet
