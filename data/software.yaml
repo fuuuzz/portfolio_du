@@ -2,15 +2,31 @@ title: Logiciels
 items:
   - name: Fusion 360
     category: CAO
-  - name: FreeCAD
-    category: CAO
   - name: Inkscape
     category: Vectoriel
-  - name: LightBurn
-    category: Découpe laser
-  - name: Cura
+  - name: PrusaSlicer
     category: Impression 3D
-  - name: KiCad
-    category: Électronique
-  - name: Arduino IDE
+  - name: Ultimaker Cura
+    category: Impression 3D
+  - name: Tinkercad
+    category: Modélidation
+  - name: Pilotes CNC
+    category: Usinage
+  - name: JobControl
+    category: Usinage
+  - name: Affinity
+    category: Design
+  - name: Suite Adobe
+    category: Design
+  - name: Notion
+    category: Gestion de projets
+  - name: Figma
+    category: Design
+  - name: Canva
+    category: Design
+  - name: Miro
+    category: Collaboration
+  - name: Git/GitHub
+    category: Gestion de code
+  - name: Visual Studio Code/Cursor
     category: Programmation

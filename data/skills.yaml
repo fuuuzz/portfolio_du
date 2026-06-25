@@ -3,7 +3,7 @@ items:
   - name: Accompagnement et animation
     description: Accueil, formation et médiation en espace de fabrication.
   - name: Pédagogie
-    description: Transmission, pédagogie par projets, suivi des usagers.
+    description: Transmission, pédagogie par projets, suivi des usagers, création de supports de formation.
   - name: Documentation
     description: Pas à pas, tutoriels, fiches techniques, signalétique, fiches de sécurité.
   - name: Programmation
@@ -12,3 +12,9 @@ items:
     description: Dessin vectoriel, concpection 3D, paramétrique, paramétrage d'usinage.
   - name: Électronique
     description: Circuits simples, soudure, programmation microcontrôleurs.
+  - name: Gestion de projet
+    description: Conduite et suivie de projets, gestion des ressources, methodes agiles.
+  - name: Communication
+    description: Communication en public, communication écrite, communication visuelle.
+  - name: Réseaux et partenariats
+    description: Gestion de relations avec les utilisateur·rices, gestion de relations avec les partenaires.
