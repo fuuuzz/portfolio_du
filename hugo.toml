@@ -15,6 +15,7 @@ disableKinds = ['taxonomy', 'term']
   github = 'https://github.com/fuuuzz'
   email = 'benoit.paquier@ik.me'
   all_projects_url = 'https://trite-cobra-9df.notion.site/311226f095eb8060b13dc57bb50a463d?v=311226f095eb8087a47a000c4fef0ed9'
+  journal_url = 'https://trite-cobra-9df.notion.site/Journal-de-bord-30b226f095eb805eb53fc9c1395738d8'
 
   [params.profile]
     name = 'Benoit Paquier'

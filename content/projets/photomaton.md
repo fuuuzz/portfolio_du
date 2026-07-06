@@ -1,5 +1,5 @@
 ---
-title: Photomaton
+title: Snaplab [🚧 Travail en cours]
 date: 2026-06-22
 summary: Conception, fabrication et programmation d'un photomaton à destination des tiers-lieux, et rédaction de documentation open-source.
 featured_image:

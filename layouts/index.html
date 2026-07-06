@@ -13,6 +13,12 @@
         </h1>
         <p class="hero-tagline">{{ .Site.Params.description }}</p>
         <div class="prose hero-prose">{{ $profile.text | markdownify }}</div>
+        <p class="prose hero-prose">Vous trouverez toute la documentation concernant mon parcours au cours du cursus dans mon
+          <a href="{{ .Site.Params.journal_url }}" target="_blank" rel="noopener noreferrer">
+            Journal de bord
+          </a>
+          .
+        </p>
       </div>
       <div class="hero-image-wrap">
         <div class="hero-image-frame">
