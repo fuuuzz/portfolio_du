@@ -28,7 +28,7 @@ links:
     url: https://fabriquedu.org/+faclab/snaplab-un-photomaton-pour-les-fablabs?projectpanes=%5B%7B%22type%22%3A%22publish%22,%22size%22%3A100%7D%5D
   - label: Fabrication de Snaplab
     url: https://trite-cobra-9df.notion.site/Fabrication-de-Snaplab-le-photomaton-pour-les-tiers-lieux-Travail-toujours-en-cours-395226f095eb805c9893ea8f0b35ce46
-draft: true
+draft: false
 ---
 
 ## Contexte
