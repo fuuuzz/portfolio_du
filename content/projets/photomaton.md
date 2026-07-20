@@ -1,9 +1,13 @@
 ---
-title: Snaplab [🚧 Travail en cours]
+title: Snaplab
 date: 2026-06-22
 summary: Conception, programmation, fabrication et documentation d'un photomaton open-source et low-tech à destination des tiers-lieux.
-featured_image: /images/projets/photomaton/feature-img.jpg
+featured_image: /images/projets/photomaton/feature-image.jpg
 images:
+  - /images/projets/photomaton/-4.JPG
+  - /images/projets/photomaton/-5.JPG
+  - /images/projets/photomaton/-6.JPG
+  - /images/projets/photomaton/-8.JPG
   - /images/projets/photomaton/-1.JPG
   - /images/projets/photomaton/-2.JPG
   - /images/projets/photomaton/-3.JPG
@@ -12,6 +16,7 @@ images:
   - /images/projets/photomaton/4.jpg
   - /images/projets/photomaton/5.gif
   - /images/projets/photomaton/6.jpg
+  - /images/projets/photomaton/feature-img.JPG
   - /images/projets/photomaton/7.jpg
   - /images/projets/photomaton/99.JPG
   - /images/projets/photomaton/8.JPG
@@ -37,5 +42,7 @@ draft: false
 ## Contexte
 
 SnapLab est un photomaton open-source réalisé avec du matériel low-tech à destination des tiers-lieux. L'objectif de SnapLab est de stimuler le lien entre les membres des différentes communautés qui composent ces tiers-lieux, en captant et partagant des moment. Ce projet a pour vocation de donner un socle technique, que ce soit côté logiciel ou matériel, pour ensuite permettre aux personnes qui le souhaitent de mettre en place le photomaton de la façon la plus adaptée à leur lieux.
+
+Au Faclab, j'ai mis en en place un tableau des compétences sur lequel les utilisateurices peuvent accrocher leur photo et renseigner leur compétences, dans le but d'être sollicité par les membres de la communauté pour partager leur savoir.
 
 Pour ce projet particulier, j'ai utilisé un Raspberry Pi, une mini imprimante thermique, une caméra, Makey Makey et des LEDS. Le modèle présenté est celui pour le Faclab de Gennevilliers.
