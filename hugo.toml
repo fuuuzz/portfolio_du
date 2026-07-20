@@ -2,7 +2,7 @@
 # En production, GitHub Actions surcharge avec --baseURL (voir .github/workflows/hugo.yml)
 baseURL = 'http://localhost:1313/'
 languageCode = 'fr-fr'
-title = 'Portfolio - Benoit Paquier - Diplôme universitaire Fabmanager'
+title = 'Portfolio - Benoit Paquier'
 defaultContentLanguage = 'fr'
 disableKinds = ['taxonomy', 'term']
 
@@ -11,7 +11,6 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   author = 'Benoit Paquier'
-  description = 'Portfolio — Fabmanager
   github = 'https://github.com/fuuuzz'
   email = 'benoit.paquier@ik.me'
   all_projects_url = 'https://trite-cobra-9df.notion.site/311226f095eb8060b13dc57bb50a463d?v=311226f095eb8087a47a000c4fef0ed9'
